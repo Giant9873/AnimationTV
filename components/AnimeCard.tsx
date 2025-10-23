@@ -1,4 +1,3 @@
-import { Animes} from "@/sanity.types";
 import Image from "next/image";
 import React from "react";
 import Link from "next/link";

@@ -1,6 +1,6 @@
 import PeliCard from "@/components/PeliCard";
 
-import { getAnimesTemporada, getPelisTemporada } from "@/sanity/queries";
+import { getPelisTemporada } from "@/sanity/queries";
 import React from "react";
 
 const PeliculasTemporada = async () => {

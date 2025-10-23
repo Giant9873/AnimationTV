@@ -1,7 +1,6 @@
-import Container from "@/components/Container";
 import AnimeCard from "@/components/AnimeCard";
 
-import { getAllAnimes, getAnimesTemporada } from "@/sanity/queries";
+import { getAllAnimes } from "@/sanity/queries";
 import React from "react";
 
 const AnimeGrid = async () => {

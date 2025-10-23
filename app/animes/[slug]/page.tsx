@@ -170,7 +170,7 @@ const SingleAnimePage = async ({
                   <h1 className=" text-3xl font-semibold">Ver Online - {anime?.capActual +`/`+ anime?.capTotal }</h1>
                 </div>
                 <h1 className=" text-2xl font-semibold mb-3">**Al abrir esperar unos segundos a que cargue el reproductor.</h1>  
-                <ImageList images={anime?.capImagenes} capl={anime?.capLinks as any} />
+                <ImageList images={anime?.capImagenes} capl={anime?.capLinks} />
             </div>
         </div>
         <div className="w-full md:w-1/4 flex flex-col gap-5">

@@ -1,6 +1,4 @@
-import Container from "@/components/Container";
-
-import { getAllAnimes, getAllPeliculas, getAnimesTemporada } from "@/sanity/queries";
+import { getAllPeliculas } from "@/sanity/queries";
 import React from "react";
 import PeliCard from "./PeliCard";
 

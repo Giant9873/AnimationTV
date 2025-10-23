@@ -1,10 +1,8 @@
-import RootLayout from "@/app/layout";
 import Container from "@/components/Container";
 import { Button } from "@/components/ui/button";
 import { urlFor } from "@/sanity/lib/image";
 import { getPeliBySlug } from "@/sanity/queries";
-import { HardDriveDownload, Search, TvMinimalPlay } from "lucide-react";
-import Head from "next/head";
+import { HardDriveDownload, TvMinimalPlay } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
