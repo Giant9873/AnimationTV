@@ -5,7 +5,6 @@ import {
   SanityImageHotspot,
 } from "@/sanity.types";
 import { urlFor } from "@/sanity/lib/image";
-import { AnimatePresence, motion } from "motion/react";
 import Image from "next/image";
 import React, { useState } from "react";
 import { Fragment } from "react";
@@ -70,9 +69,6 @@ interface Props {
           <Modal isVisible={showModal} onClose={() => setShowModal(false)}
             videourl={selectedVideoUrl} children={undefined}>
           </Modal></Fragment>
-
-          
-          
         ))}
 
 

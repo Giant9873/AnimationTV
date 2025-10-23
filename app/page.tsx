@@ -1,6 +1,4 @@
-import AnimeGrid from '@/components/AnimeGrid';
 import Container from '@/components/Container';
-import Container2 from '@/components/Container2';
 import HomeBanner from '@/components/HomeBanner';
 import AnimesTemporada from '@/components/AnimesTemporada';
 import ListaPeliculas from '@/components/PeliculasTemporada';

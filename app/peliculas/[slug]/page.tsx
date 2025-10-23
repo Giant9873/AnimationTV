@@ -1,7 +1,5 @@
 import RootLayout from "@/app/layout";
 import Container from "@/components/Container";
-import ImageList from "@/components/ImagenL2";
-import RecoAnime from "@/components/RecoAnime";
 import { Button } from "@/components/ui/button";
 import { urlFor } from "@/sanity/lib/image";
 import { getPeliBySlug } from "@/sanity/queries";
@@ -176,7 +174,7 @@ const SinglePeliculaPage = async ({
         </div>
         <div className="w-full md:w-1/4 flex flex-col gap-5">
             <h1 className=" text-3xl font-semibold">También te puede interesar:</h1>
-            <RecoAnime animereco={peli?.recoAnime1 as any} />
+            
         </div>
 
       

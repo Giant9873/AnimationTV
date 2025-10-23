@@ -177,7 +177,7 @@ const SingleAnimePage = async ({
         </div>
         <div className="w-full md:w-1/4 flex flex-col gap-5">
             <h1 className=" text-3xl font-semibold">También te puede interesar:</h1>
-            <RecoAnime animereco={anime?.recoAnime1 as any} />
+            <RecoAnime animereco={anime?.recoAnime1} />
         </div>
 
       
