@@ -66,8 +66,8 @@ interface Props {
             <div className="overlay"> <h2 className="fontgr">‣ </h2> </div>
           </button>
           
-          <Modal isVisible={showModal} onClose={() => setShowModal(false)}
-            videourl={selectedVideoUrl} children={undefined}>
+          <Modal isVisible={showModal} onClose={() => setShowModal(false)} videourl={selectedVideoUrl}>
+             {undefined}
           </Modal></Fragment>
         ))}
 
