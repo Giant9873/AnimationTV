@@ -40,6 +40,10 @@ export async function generateMetadata({
     ? sino.substring(0, 150) + (sino.length > 150 ? '...' : '')
     : "Toda la animación en una sola web."; // Valor por defecto si no hay sinopsis
 
+  const imageUrl = anime.imageBanner 
+      ? urlFor(anime.imageBanner).width(1200).height(630).url() 
+      : 'URL_A_TU_IMAGEN_POR_DEFECTO';
+      
   // 1. Crear la parte principal del título (sin el contador de capítulos)
   const baseTitle = fullTitle.length > maxTitleLength
   ? fullTitle.substring(0, maxTitleLength - 3) + '...'
@@ -49,6 +53,22 @@ export async function generateMetadata({
   return {
   title: baseTitle + " - "+suffix,
     description: description,
+    
+    openGraph: {
+            title: anime.titulo || 'Animation TV',
+            description: description,
+            url: `https://animation-tv.vercel.app/animes/${slug}`, // Usa tu dominio real
+            siteName: 'Animation TV',
+            type: 'website',
+            images: [
+                {
+                    url: imageUrl, // URL ABSOLUTA
+                    width: 1200,
+                    height: 630,
+                    alt: anime.titulo || 'Portada del Anime',
+                },
+            ],
+        },
   };
 }
 

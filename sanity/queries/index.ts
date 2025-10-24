@@ -3,6 +3,8 @@ import { sanityFetch } from "../lib/live";
 import { ALLANIMES_QUERY, TEMPORADA_ANIMES, ANIME_BY_SLUG_QUERY, TEMPORADA_PELIS, PELI_BY_SLUG_QUERY, ALLPELICULAS_QUERY } from "./query";
 import { PeliProps } from "@/components/PeliCard";
 
+
+
 const getAnimesTemporada = async () => {
   try {
     const { data } = await sanityFetch({ query: TEMPORADA_ANIMES });
@@ -55,18 +57,19 @@ const getAllPeliculas = async () => {
 
 const getAnimeBySlug = async (slug: string) => {
   try {
-    const product = await sanityFetch({
+    const anime = await (sanityFetch as any)({ // 👈 Aplicar as any a sanityFetch
       query: ANIME_BY_SLUG_QUERY,
       params: {
         slug,
       },
+      revalidate: 60, 
     });
-    return product?.data || null;
+    return anime?.data || null;
   } catch (error) {
     console.error("Error fetching anime by ID:", error);
     return null;
   }
-};
+}
 
 const getPeliBySlug = async (slug: string) => {
   try {

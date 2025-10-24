@@ -56,7 +56,7 @@ const HomeBanner = () => {
                         <div className='relative w-auto h-auto baner2atv'>
                           <div className='gap-4 bg-black/30 md:pt-90 md:pb-60 pt-30 pb-40'>
                              <div className='flex justify-center'>
-                                <h1 className="md:text-6xl sm:text-3xl font-semibold" >Kimetsu no Yaiba: Mugen-jō-hen</h1>
+                                <h1 className="md:text-6xl text-2xl font-semibold" >Kimetsu no Yaiba: Mugen-jō-hen</h1>
                             </div>
                             <div className='flex place-content-center pt-10'>
                                 <Link href={"/"}>
@@ -69,7 +69,7 @@ const HomeBanner = () => {
                         <div className='relative w-auto h-auto baner3atv'>
                           <div className='gap-4 bg-black/30 md:pt-90 md:pb-60 pt-30 pb-40'>
                              <div className='flex justify-center'>
-                                <h1 className="md:text-6xl sm:text-3xl font-semibold" >One Punch Man - Temporada 3</h1>
+                                <h1 className="md:text-6xl text-2xl font-semibold" >One Punch Man - Temporada 3</h1>
                             </div>
                             <div className='flex place-content-center pt-10'>
                                 <Link href={"/animes/one-punch-man-s3"}>

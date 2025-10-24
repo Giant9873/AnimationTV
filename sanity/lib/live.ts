@@ -4,6 +4,12 @@
 import { defineLive } from "next-sanity/live";
 import { client } from './client'
 
+interface QueryOptions {
+  query: string;
+  params?: { [key: string]: any }; // O el tipo de tus parámetros
+  revalidate?: number; // 👈 Agrega esta propiedad
+}
+
 export const { sanityFetch, SanityLive } = defineLive({
   client,
 });
