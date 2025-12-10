@@ -42,7 +42,7 @@ export async function generateMetadata({
 
   const imageUrl = anime.imageBanner 
       ? urlFor(anime.imageBanner).width(1200).height(630).url() 
-      : 'URL_A_TU_IMAGEN_POR_DEFECTO';
+      : 'https://animation-tv.vercel.app/imagenes/atv-banner3.png';
       
   // 1. Crear la parte principal del título (sin el contador de capítulos)
   const baseTitle = fullTitle.length > maxTitleLength
@@ -68,6 +68,13 @@ export async function generateMetadata({
                     alt: anime.titulo || 'Portada del Anime',
                 },
             ],
+        },
+    
+    twitter: {
+            card: 'summary_large_image', // Muestra la imagen grande
+            title: anime.titulo || 'Animation TV',
+            description: description,
+            images: [imageUrl], // URL ABSOLUTA
         },
   };
 }

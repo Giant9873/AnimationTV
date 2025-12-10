@@ -41,12 +41,12 @@ const HomeBanner = () => {
               <CarouselContent>
                 <CarouselItem>
                         <div className='relative w-auto h-auto baner1atv'>
-                          <div className='gap-4 bg-black/30 md:pt-90 md:pb-60 pt-30 pb-40'>
+                          <div className='gap-4 bg-black/50 md:pt-90 md:pb-60 pt-30 pb-40'>
                              <div className='flex justify-center'>
-                                <h1 className="md:text-6xl text-2xl font-semibold" >DAN DA DAN - Temporada 2</h1>
+                                <h1 className="md:text-6xl text-2xl font-bold" >Chainsaw Man Movie: Reze-hen</h1>
                             </div>
                             <div className='flex place-content-center pt-10'>
-                                <Link href={"/animes/dan-da-dan-s2"}>
+                                <Link href={"/peliculas/chainsaw-man-movie-reze-hen"}>
                                 <Button className='text-black md:text-2xl bg-amber-400 hover:text-white hover:bg-white/20 hoverEffect text-1xl font-semibold md:p-7' > Ver Ahora</Button></Link>
                             </div>
                           </div>                          
@@ -56,10 +56,10 @@ const HomeBanner = () => {
                         <div className='relative w-auto h-auto baner2atv'>
                           <div className='gap-4 bg-black/30 md:pt-90 md:pb-60 pt-30 pb-40'>
                              <div className='flex justify-center'>
-                                <h1 className="md:text-6xl text-2xl font-semibold" >Kimetsu no Yaiba: Mugen-jō-hen</h1>
+                                <h1 className="md:text-6xl text-2xl font-bold" >GACHIAKUTA</h1>
                             </div>
                             <div className='flex place-content-center pt-10'>
-                                <Link href={"/"}>
+                                <Link href={"/animes/gachiakuta"}>
                                 <Button className='text-black md:text-2xl bg-amber-400 hover:text-white hover:bg-white/20 hoverEffect text-1xl font-semibold md:p-7' > Ver Ahora</Button></Link>
                             </div>
                           </div>                          
@@ -69,7 +69,7 @@ const HomeBanner = () => {
                         <div className='relative w-auto h-auto baner3atv'>
                           <div className='gap-4 bg-black/30 md:pt-90 md:pb-60 pt-30 pb-40'>
                              <div className='flex justify-center'>
-                                <h1 className="md:text-6xl text-2xl font-semibold" >One Punch Man - Temporada 3</h1>
+                                <h1 className="md:text-6xl text-2xl font-bold" >One Punch Man - Temporada 3</h1>
                             </div>
                             <div className='flex place-content-center pt-10'>
                                 <Link href={"/animes/one-punch-man-s3"}>

@@ -8,6 +8,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import React from "react";
 import type { Metadata } from 'next';
+import RecoAnime from "@/components/RecoAnime";
 
 // 1. Define la función para generar los metadatos
 export async function generateMetadata({
@@ -38,6 +39,10 @@ export async function generateMetadata({
     ? sino.substring(0, 150) + (sino.length > 150 ? '...' : '')
     : "Toda la animación en una sola web."; // Valor por defecto si no hay sinopsis
 
+  const imageUrl = peli.bannerPeli 
+      ? urlFor(peli.bannerPeli).width(1200).height(630).url() 
+      : 'https://animation-tv.vercel.app/imagenes/atv-banner4.png';
+
   // 1. Crear la parte principal del título (sin el contador de capítulos)
   const baseTitle = fullTitle.length > maxTitleLength
   ? fullTitle.substring(0, maxTitleLength - 3) + '...'
@@ -46,6 +51,29 @@ export async function generateMetadata({
   return {
   title: baseTitle + " - "+suffix,
     description: description,
+
+    openGraph: {
+            title: peli.titulo || 'Animation TV',
+            description: description,
+            url: `https://animation-tv.vercel.app/peliculas/${slug}`, // Usa tu dominio real
+            siteName: 'Animation TV',
+            type: 'website',
+            images: [
+                {
+                    url: imageUrl, // URL ABSOLUTA
+                    width: 1200,
+                    height: 630,
+                    alt: peli.titulo || 'Portada de la Pelicula',
+                },
+            ],
+        },
+    
+    twitter: {
+            card: 'summary_large_image', // Muestra la imagen grande
+            title: peli.titulo || 'Animation TV',
+            description: description,
+            images: [imageUrl], // URL ABSOLUTA
+        },
   };
 }
 
@@ -172,7 +200,7 @@ const SinglePeliculaPage = async ({
         </div>
         <div className="w-full md:w-1/4 flex flex-col gap-5">
             <h1 className=" text-3xl font-semibold">También te puede interesar:</h1>
-            
+            <RecoAnime animereco={peli?.recoAnime1} />
         </div>
 
       

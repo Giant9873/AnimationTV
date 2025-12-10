@@ -27,12 +27,12 @@ const ANIME_BY_SLUG_QUERY = groq`
   }
   `;
 
-const PELI_BY_SLUG_QUERY = defineQuery(
-  `*[_type == "peliculas" && slug.current == $slug] | order(titulo asc) [0]{
+const PELI_BY_SLUG_QUERY = groq`
+  *[_type == "peliculas" && slug.current == $slug] | order(titulo asc) [0]{
     ...,"generos": generos[]->title, "categorias": categorias[]->title,
     "recoAnime1": recoAnime1[]->{titulo, slug, imagePoster}, 
-  }`
-);
+  }
+  `;
 
 const RECO_ANIMES = defineQuery(
 `*[ _type == "animes"] {

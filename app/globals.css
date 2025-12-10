@@ -134,14 +134,14 @@
 }
 
 .baner1atv{
-  background-image: url('/imagenes/atv-banner1.png');
+  background-image: url('/imagenes/atv-banner4.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed !important;
 }
 
 .baner2atv{
-  background-image: url('/imagenes/atv-banner2.png');
+  background-image: url('/imagenes/banner/gachiakuta - banner.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
